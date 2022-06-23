@@ -5,5 +5,5 @@ export function Event() {
         <>
             <Header />
         </>
-    );
-};
+    )
+}

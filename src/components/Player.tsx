@@ -3,5 +3,5 @@ export function Player() {
         <div>
             player
         </div>
-    );
-};
+    )
+}

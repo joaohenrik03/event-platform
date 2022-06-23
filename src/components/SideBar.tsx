@@ -3,5 +3,5 @@ export function SideBar() {
         <div>
             sidebar
         </div>
-    );
-};
+    )
+}

@@ -3,5 +3,5 @@ export function Lesson() {
         <div>
             lesson
         </div>
-    );
-};
+    )
+}
