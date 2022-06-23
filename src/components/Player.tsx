@@ -1,7 +1,7 @@
 export function Player() {
     return (
-        <div>
-            player
+        <div className="flex-1">
+            Vídeo
         </div>
     )
 }
