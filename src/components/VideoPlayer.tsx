@@ -21,7 +21,7 @@ export function VideoPlayer(props: VideoProps) {
     }
 
     return (
-        <div className="flex-1">
+        <div className="flex-1 relative">
             <div className="bg-black flex justify-center">
                 <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
                     <Player>
@@ -103,7 +103,9 @@ export function VideoPlayer(props: VideoProps) {
                 </div>
             </div>
 
-            <Footer />
+            <footer className="absolute bottom-0 w-full">
+                <Footer />
+            </footer>
         </div>
     )
 }
