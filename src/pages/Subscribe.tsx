@@ -27,11 +27,11 @@ export function Subscribe() {
     }
 
     return (
-        <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center relative">
-            <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
+        <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center relative px-8">
+            <div className="w-full max-w-[1100px] flex items-center justify-between mt-8 mx-auto flex-col gap-8 lg:flex-row lg:mt-20 tg:gap-0">
                 <div className="max-w-[648px]">
                     <Logo />
-                    <h1 className='mt-8 text-[2.5rem] leading-tight'>
+                    <h1 className='text-[2rem] mt-8 lg: leading-tight'>
                         Construa uma <strong className='text-blue-500'>aplicação completa</strong>, do zero, com <strong className='text-blue-500'>React</strong>
                     </h1>
                     <p className='mt-4 text-gray-200 leading-relaxed'>
