@@ -27,7 +27,7 @@ export function Subscribe() {
     }
 
     return (
-        <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
+        <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center relative">
             <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
                 <div className="max-w-[648px]">
                     <Logo />
@@ -71,7 +71,7 @@ export function Subscribe() {
 
             <img src="./src/assets/code-bg.png" alt="Imagem de uma IDE" className="mt-10" />
 
-            <footer className='flex flex-1 items-center bg-black w-full'>
+            <footer className='flex flex-1 items-center bg-black w-full absolute bottom-0'>
                 <Footer />
             </footer>
         </div>
