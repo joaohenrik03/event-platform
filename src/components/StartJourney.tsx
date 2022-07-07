@@ -1,10 +1,14 @@
 import { Footer } from "./Footer";
 import { Logo } from "./Logo";
 
-export function StartJourney() {
+type StartJourneyProps = {
+    modalIsOpen: boolean;
+}
+
+export function StartJourney(props: StartJourneyProps) {
     return (
-        <div className="flex-1 relative">
-            <div className="flex flex-col items-center justify-center gap-8 h-[60vh] w-full max-w-[1100px]">
+        <div className={`flex-1 ${props.modalIsOpen ? 'hidden' : ''}`}>
+            <div className="flex flex-col items-center justify-center h-full lg:max-h-[60vh] gap-8 w-full max-w-[1100px]">
                 <div className="flex flex-col items-center gap-4">
                     <span className="font-bold text-xl text-gray-50">
                         Bem vindo ao
@@ -20,10 +24,6 @@ export function StartJourney() {
                     </p>
                 </div>
             </div>
-
-            <footer className="absolute bottom-0 w-full">
-                <Footer />
-            </footer>
         </div>
     )
 }

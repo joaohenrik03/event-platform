@@ -7,6 +7,7 @@ import { useGetLessonBySlugQuery } from "../graphql/generated";
 
 type VideoProps = {
     lessonSlug: string;
+    modalIsOpen: boolean;
 }
 
 export function VideoPlayer(props: VideoProps) {
@@ -21,7 +22,7 @@ export function VideoPlayer(props: VideoProps) {
     }
 
     return (
-        <div className="flex-1 relative">
+        <div className={`flex-1 relative ${props.modalIsOpen ? 'hidden' : ''}`}>
             <div className="bg-black flex justify-center">
                 <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
                     <Player>
@@ -32,7 +33,7 @@ export function VideoPlayer(props: VideoProps) {
             </div>
 
             <div className="p-8 max-w-[1100px]">
-                <div className="flex items-start gap-16">
+                <div className="flex flex-col items-start gap-16 lg:flex-row">
                     <div className="flex-1">
                         <h1 className="text-2xl font-bold">
                             {data.lesson.title}
@@ -57,7 +58,7 @@ export function VideoPlayer(props: VideoProps) {
                         )} 
                     </div>
 
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-4 w-full md:w-auto">
                         <a href="https://discord.com/oauth2/authorize?client_id=949331074079662180&redirect_uri=https%3A%2F%2Fdiscord-service.rocketseat.dev%2Fsignin%2Fdynamic-callback&response_type=code&scope=identify+email+guilds.join&state=ignite-lab" target="_blank" className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
                             <DiscordLogo size={24}/>
                             Comunidade do Discord
@@ -70,9 +71,9 @@ export function VideoPlayer(props: VideoProps) {
                     </div>
                 </div>
 
-                <div className="gap-8 mt-20 grid grid-cols-2">
-                    <a href="https://efficient-sloth-d85.notion.site/Material-complementar-86d4ef35af16471ebc3ae3eba1a378e5" target="_blank" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
-                        <div className="bg-green-700 h-full p-6 flex items-center">
+                <div className="gap-8 mt-20 grid md:grid-cols-2 max-w">
+                    <a href="https://drive.google.com/drive/folders/1mxWnvlqmH7MbVRv2Na9xFNgCQCygM1iR" target="_blank" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-3 md:gap-6 hover:bg-gray-600 transition-colors">
+                        <div className="bg-green-700 h-full p-0.5 sm:p-6 flex items-center">
                             <FileArrowDown size={40}/>
                         </div>
                         <div className="py-6 leading-relaxed text-2xl">
@@ -81,13 +82,13 @@ export function VideoPlayer(props: VideoProps) {
                                 Acesse o material complementar para acelerar o seu desenvolvimento
                             </p>
                         </div>  
-                        <div className="h-full p-6 flex items-center">
+                        <div className="h-full p-0.5 sm:p-6 flex items-center">
                             <CaretRight />
                         </div>
                     </a>
 
-                    <a href="https://drive.google.com/drive/folders/1mxWnvlqmH7MbVRv2Na9xFNgCQCygM1iR" target="_blank" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
-                        <div className="bg-green-700 h-full p-6 flex items-center">
+                    <a href="https://drive.google.com/drive/folders/1mxWnvlqmH7MbVRv2Na9xFNgCQCygM1iR" target="_blank" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-3 md:gap-6 hover:bg-gray-600 transition-colors">
+                        <div className="bg-green-700 h-full p-0.5 sm:p-6 flex items-center">
                             <Image size={40}/>
                         </div>
                         <div className="py-6 leading-relaxed text-2xl">
@@ -96,16 +97,12 @@ export function VideoPlayer(props: VideoProps) {
                                 Baixe wallpapers exclusivos do Ignite Lab e personalize a sua máquina
                             </p>
                         </div>  
-                        <div className="h-full p-6 flex items-center">
+                        <div className="h-full p-0.5 sm:p-6 flex items-center">
                             <CaretRight />
                         </div>
                     </a>
                 </div>
             </div>
-
-            <footer className="absolute bottom-0 w-full">
-                <Footer />
-            </footer>
         </div>
     )
 }

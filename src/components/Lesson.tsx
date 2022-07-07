@@ -8,6 +8,7 @@ type LessonProps = {
     slug: string;
     availableAt: Date;
     type: 'live' | 'class';
+    closeModal: () => void;
 }
 
 export function Lesson(props: LessonProps) {
@@ -21,7 +22,7 @@ export function Lesson(props: LessonProps) {
     })
 
     return (
-        <Link to={`/event/lesson/${props.slug}`} className={`group ${isLessonAvailable ? '' : 'pointer-events-none'}`}>
+        <Link to={`/event/lesson/${props.slug}`} className={`group ${isLessonAvailable ? '' : 'pointer-events-none'}`} onClick={props.closeModal}>
             <span className="text-gray-300 ">
                 {availableDateFormatted}
             </span>

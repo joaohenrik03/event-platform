@@ -70,10 +70,6 @@ export function Subscribe() {
             </div>
 
             <img src="./src/assets/code-bg.png" alt="Imagem de uma IDE" className="mt-10" />
-
-            <footer className='flex flex-1 items-center bg-black w-full absolute bottom-0'>
-                <Footer />
-            </footer>
         </div>
     )
 }
