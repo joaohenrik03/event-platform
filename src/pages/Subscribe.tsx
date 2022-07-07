@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Footer } from '../components/Footer';
 import { Logo } from '../components/Logo';
 import { useCreateSubscriberMutation } from '../graphql/generated';
+import IdeImg from '../assets/code-bg.png';
 
 export function Subscribe() {
     const navigate = useNavigate();
@@ -69,7 +70,7 @@ export function Subscribe() {
                     </div>
                 </div>
 
-                <img src="./src/assets/code-bg.png" alt="Imagem de uma IDE" className="mt-10" />
+                <img src={IdeImg} alt="Imagem de uma IDE" className="mt-10" />
             </div>
 
             <Footer />
