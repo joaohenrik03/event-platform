@@ -7,8 +7,8 @@ type StartJourneyProps = {
 
 export function StartJourney(props: StartJourneyProps) {
     return (
-        <div className={`flex-1 ${props.modalIsOpen ? 'hidden' : ''}`}>
-            <div className="flex flex-col items-center justify-center h-full lg:max-h-[60vh] gap-8 w-full max-w-[1100px]">
+        <div className={`flex flex-col flex-1 ${props.modalIsOpen ? 'hidden' : ''}`}>
+            <div className="flex flex-col items-center justify-center h-full lg:max-h-[60vh] gap-8 w-full max-w-[1100px] pt-4 mb-16">
                 <div className="flex flex-col items-center gap-4">
                     <span className="font-bold text-xl text-gray-50">
                         Bem vindo ao
@@ -24,6 +24,10 @@ export function StartJourney(props: StartJourneyProps) {
                     </p>
                 </div>
             </div>
+
+            <div className="flex-1"></div>
+
+            <Footer />
         </div>
     )
 }

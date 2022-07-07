@@ -22,7 +22,7 @@ export function VideoPlayer(props: VideoProps) {
     }
 
     return (
-        <div className={`flex-1 relative ${props.modalIsOpen ? 'hidden' : ''}`}>
+        <div className={`flex flex-col flex-1 ${props.modalIsOpen ? 'hidden' : ''}`}>
             <div className="bg-black flex justify-center">
                 <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
                     <Player>
@@ -32,7 +32,7 @@ export function VideoPlayer(props: VideoProps) {
                 </div>
             </div>
 
-            <div className="p-8 max-w-[1100px]">
+            <div className="p-8 max-w-[1100px] mb-16">
                 <div className="flex flex-col items-start gap-16 lg:flex-row">
                     <div className="flex-1">
                         <h1 className="text-2xl font-bold">
@@ -103,6 +103,10 @@ export function VideoPlayer(props: VideoProps) {
                     </a>
                 </div>
             </div>
+
+            <div className="flex-1"></div>
+
+            <Footer />
         </div>
     )
 }
