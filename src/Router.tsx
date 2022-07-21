@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { NotFound } from "./components/NotFound";
+import { NotFound } from "./pages/NotFound";
 import { Event } from './pages/Event';
 import { Subscribe } from "./pages/Subscribe";
 
